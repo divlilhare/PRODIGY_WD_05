@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Weather App - Expanded</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🌦 Weather App</h1>
+      <button id="theme-toggle">🌙 Dark Mode</button>
+    </header>
+
+    <div class="search">
+      <input type="text" id="locationInput" placeholder="Enter city..." />
+      <button onclick="getWeatherByInput()">Search</button>
+      <button onclick="getWeatherByLocation()">📍 Current Location</button>
+    </div>
+
+    <section id="currentWeather" class="weather-info hidden">
+      <h2 id="cityName"></h2>
+      <img id="icon" alt="Weather Icon" />
+      <p id="description"></p>
+      <p><strong>Temperature:</strong> <span id="temperature"></span>°C</p>
+      <p><strong>Humidity:</strong> <span id="humidity"></span>%</p>
+      <p><strong>Wind:</strong> <span id="wind"></span> m/s</p>
+    </section>
+
+    <section id="forecast" class="hidden">
+      <h2>5-Day Forecast</h2>
+      <div id="forecastContainer" class="forecast-grid"></div>
+    </section>
+
+    <p id="error" class="error"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
